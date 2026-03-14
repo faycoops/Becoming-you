@@ -38,7 +38,7 @@ nav { position:sticky; top:0; z-index:100; background:rgba(10,10,10,0.95); backd
 
 /* HERO */
 .hero { position:relative; min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:100px 28px 60px; overflow:hidden; background:#0a0a0a; }
-.hero-bg { position:absolute; inset:0; background:url(‘https://images.unsplash.com/photo-1519415387722-a1c3bbef716c?w=1200&q=80’) center/cover no-repeat; opacity:0.35; }
+.hero-bg { position:absolute; inset:0; background:url(‘https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1200&q=80’) center/cover no-repeat; opacity:0.35; }
 .hero-overlay { position:absolute; inset:0; background:linear-gradient(to bottom, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.5) 60%, rgba(10,10,10,0.95) 100%); }
 .hero-content { position:relative; z-index:1; max-width:800px; }
 .hero-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); backdrop-filter:blur(10px); border-radius:100px; padding:7px 18px; font-size:0.68rem; font-weight:600; color:#fff; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:32px; }
@@ -90,7 +90,7 @@ nav { position:sticky; top:0; z-index:100; background:rgba(10,10,10,0.95); backd
 .truth h2 { font-family:‘Inter’,sans-serif; font-weight:900; font-size:clamp(1.8rem,4vw,2.8rem); line-height:1.05; color:var(–black); margin-bottom:32px; text-transform:uppercase; }
 .truth ul { list-style:none; margin-bottom:32px; }
 .truth ul li { padding:12px 0 12px 24px; position:relative; font-size:1rem; color:var(–body); line-height:1.7; border-bottom:1px solid var(–border); }
-.truth ul li::before { content:’’; position:absolute; left:0; top:22px; width:8px; height:8px; border-radius:50%; background:var(–gradient); }
+.truth ul li::before { content:‘✦’; position:absolute; left:0; top:14px; font-size:0.7rem; color:var(–purple); }
 .truth p { font-size:1.05rem; color:var(–body); line-height:1.9; margin-bottom:20px; }
 .truth p strong { color:var(–black); font-weight:700; }
 
@@ -129,12 +129,12 @@ nav { position:sticky; top:0; z-index:100; background:rgba(10,10,10,0.95); backd
 .science h2 { font-family:‘Inter’,sans-serif; font-weight:900; font-size:clamp(1.6rem,4vw,2.4rem); line-height:1.05; color:var(–black); margin-bottom:12px; text-transform:uppercase; }
 .science-sub { font-size:0.95rem; color:var(–mid); margin-bottom:44px; line-height:1.7; }
 .science-card { background:var(–light); border-radius:16px; padding:32px; margin-bottom:12px; }
-.science-num { font-family:‘Fraunces’,serif; font-weight:700; font-size:3.5rem; color:var(–purple); line-height:1; margin-bottom:10px; }
+.science-num { font-family:‘Fraunces’,serif; font-weight:700; font-size:5rem; background:var(–gradient); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; line-height:1; margin-bottom:10px; }
 .science-label { font-size:0.75rem; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; color:var(–black); margin-bottom:14px; }
 .science-card p { font-size:0.9rem; color:var(–mid); line-height:1.75; }
 
 /* FINAL CTA */
-.final-cta { background:var(–black); padding:100px 28px; text-align:center; }
+.final-cta { background:#0a0a0a !important; padding:100px 28px; text-align:center; }
 .final-cta-inner { max-width:600px; margin:0 auto; }
 .final-cta h2 { font-family:‘Fraunces’,serif; font-weight:900; font-style:italic; font-size:clamp(2.2rem,6vw,4rem); color:#fff; margin-bottom:20px; line-height:1.1; }
 .final-cta p { font-size:1rem; color:rgba(255,255,255,0.6); line-height:1.8; margin-bottom:40px; }
@@ -177,10 +177,10 @@ footer strong { color:rgba(168,85,247,0.7); font-weight:500; }
     <div class="hero-badge"><span class="hero-badge-dot"></span> A Mindvalley Quest</div>
     <h1>
       Becoming
-      <em>You</em>
+      <em style="background:var(--gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 20px rgba(168,85,247,0.4))">You</em>
     </h1>
     <p class="hero-sub">A 30-day journey of self-discovery where you strip away everything you were told to be — and finally meet who you actually are.</p>
-    <button class="btn-hero" onclick="document.querySelector('.final-cta').scrollIntoView({behavior:'smooth'})">Begin Your Journey</button>
+    <button class="btn-hero" onclick="document.querySelector('.final-cta').scrollIntoView({behavior:'smooth'})" style="background:var(--gradient);box-shadow:0 8px 40px rgba(107,33,168,0.5);">Begin Your Journey</button>
   </div>
 </section>
 
@@ -202,10 +202,10 @@ footer strong { color:rgba(168,85,247,0.7); font-weight:500; }
 
 <div style="width:100%;max-height:520px;overflow:hidden;position:relative;">
   <img 
-    src="https://images.unsplash.com/photo-1519415387722-a1c3bbef716c?w=1200&q=80" 
+    src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=80" 
     alt="Self discovery" 
     style="width:100%;height:520px;object-fit:cover;object-position:center top;display:block;"
-    onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&q=80'"
+    onerror="this.style.display='none'"
   />
   <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(255,255,255,0.95) 100%);"></div>
 </div>
@@ -214,8 +214,8 @@ footer strong { color:rgba(168,85,247,0.7); font-weight:500; }
 
 <section class="about">
   <div class="about-inner">
-    <span class="eyebrow reveal">About the Quest</span>
-    <h2 class="reveal reveal-delay-1">DISCOVER WHO YOU ARE <span>BENEATH</span> IT ALL.</h2>
+    <span class="eyebrow reveal" style="color:var(--purple);font-weight:700;">About the Quest</span>
+    <h2 class="reveal reveal-delay-1">DISCOVER WHO YOU ARE <span style="color:var(--purple);">BENEATH</span> IT ALL.</h2>
     <p class="about-quote reveal reveal-delay-2">"Over 30 days you will unlearn, unwind and return to the most powerful version of yourself — the one who was always there."</p>
     <p class="reveal reveal-delay-2">Become who you have always wanted to be.</p>
     <p class="reveal reveal-delay-3">Most people spend their entire lives performing a version of themselves built from other people's expectations, childhood wounds and societal scripts. They achieve success, build careers, maintain relationships — and still feel like something is missing.</p>
@@ -256,7 +256,7 @@ footer strong { color:rgba(168,85,247,0.7); font-weight:500; }
 </div>
 
 <div class="pain-cta reveal">
-  <button class="btn-small" onclick="document.querySelector('.final-cta').scrollIntoView({behavior:'smooth'})">Join Becoming You Today</button>
+  <button class="btn-small" onclick="document.querySelector('.final-cta').scrollIntoView({behavior:'smooth'})" style="background:var(--gradient);">Join Becoming You Today ✦</button>
 </div>
 ```
 
@@ -267,7 +267,7 @@ footer strong { color:rgba(168,85,247,0.7); font-weight:500; }
 
 <section class="narrative">
   <div class="narrative-inner">
-    <h2 class="reveal">COME HOME TO YOURSELF.</h2>
+    <h2 class="reveal"><span style="color:var(--purple);">COME HOME</span> TO YOURSELF.</h2>
     <p class="reveal">You have survived more than most people know.</p>
     <p class="reveal">You have kept moving. You have kept trying.</p>
     <p class="reveal">But something inside still feels unfinished.</p>
@@ -282,7 +282,7 @@ footer strong { color:rgba(168,85,247,0.7); font-weight:500; }
 
 <section class="truth">
   <div class="truth-inner">
-    <h2 class="reveal">THE TRUTH IS THIS: NOTHING CHANGES UNTIL YOU KNOW WHO YOU ARE.</h2>
+    <h2 class="reveal">THE TRUTH IS THIS: NOTHING CHANGES UNTIL YOU KNOW <span style="color:var(--purple);">WHO YOU ARE.</span></h2>
     <ul class="reveal">
       <li>Childhood conditioning still deciding what you tolerate and what you believe you deserve</li>
       <li>"I am not enough" running silently beneath every decision you make</li>
@@ -300,16 +300,16 @@ footer strong { color:rgba(168,85,247,0.7); font-weight:500; }
 
 <section class="experience">
   <div class="experience-inner">
-    <h2 class="reveal" style="text-align:center">WHAT YOU WILL <span>EXPERIENCE</span></h2>
+    <h2 class="reveal" style="text-align:center">WHAT YOU WILL <span style="color:var(--purple);">EXPERIENCE</span></h2>
     <p class="experience-sub reveal reveal-delay-1">Over 30 days you will move through three transformational phases designed to take you from lost to found — from performing to truly living.</p>
 
 ```
 <div class="day-card reveal">
-  <div class="day-img" style="background:linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=800&q=80') center/cover;">
+  <div class="day-img" style="background:linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1474418397713-7ede21d49118?w=800&q=80') center/cover;">
     <div class="day-img-content">
       <span class="day-num">Phase 01</span>
       <p class="day-title">UNCOVER</p>
-      <p class="day-subtitle">Remember Who You Are</p>
+      <p class="day-subtitle" style="color:#c084fc;">Remember Who You Are</p>
     </div>
   </div>
   <div class="day-desc">
@@ -322,7 +322,7 @@ footer strong { color:rgba(168,85,247,0.7); font-weight:500; }
     <div class="day-img-content">
       <span class="day-num">Phase 02</span>
       <p class="day-title">RELEASE</p>
-      <p class="day-subtitle">Let Go of What Was Never Yours</p>
+      <p class="day-subtitle" style="color:#c084fc;">Let Go of What Was Never Yours</p>
     </div>
   </div>
   <div class="day-desc">
@@ -331,11 +331,11 @@ footer strong { color:rgba(168,85,247,0.7); font-weight:500; }
 </div>
 
 <div class="day-card reveal">
-  <div class="day-img" style="background:linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80') center/cover;">
+  <div class="day-img" style="background:linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80') center/cover;">
     <div class="day-img-content">
       <span class="day-num">Phase 03</span>
       <p class="day-title">BECOME</p>
-      <p class="day-subtitle">Step Into Who You Were Always Meant to Be</p>
+      <p class="day-subtitle" style="color:#c084fc;">Step Into Who You Were Always Meant to Be</p>
     </div>
   </div>
   <div class="day-desc">
@@ -344,7 +344,7 @@ footer strong { color:rgba(168,85,247,0.7); font-weight:500; }
 </div>
 
 <div class="pain-cta reveal" style="margin-top:40px">
-  <button class="btn-small" onclick="document.querySelector('.final-cta').scrollIntoView({behavior:'smooth'})">Join Becoming You Today</button>
+  <button class="btn-small" onclick="document.querySelector('.final-cta').scrollIntoView({behavior:'smooth'})" style="background:var(--gradient);">Join Becoming You Today ✦</button>
 </div>
 ```
 
@@ -388,25 +388,25 @@ footer strong { color:rgba(168,85,247,0.7); font-weight:500; }
 
 <section class="science">
   <div class="science-inner">
-    <h2 class="reveal">THE RESULTS SPEAK FOR THEMSELVES</h2>
+    <h2 class="reveal">THE <span style="color:var(--purple);">RESULTS</span> SPEAK FOR THEMSELVES</h2>
     <p class="science-sub reveal">Based on participant data collected across 12,000+ students who completed the Becoming You Quest.</p>
 
 ```
 <div class="science-card reveal">
   <p class="science-num">94%</p>
-  <p class="science-label">Reported a breakthrough in self-understanding within the first 10 days</p>
+  <p class="science-label">Reported a <span style="color:var(--purple);">breakthrough</span> in self-understanding within the first 10 days</p>
   <p>Students described finally being able to see themselves clearly — their patterns, their gifts, their blocks — often for the first time in their lives.</p>
 </div>
 
 <div class="science-card reveal">
   <p class="science-num">+67%</p>
-  <p class="science-label">Increase in reported sense of purpose and direction</p>
+  <p class="science-label">Increase in reported sense of <span style="color:var(--purple);">purpose</span> and direction</p>
   <p>By the end of the 30 days, two-thirds of students reported a significant shift in clarity around what they want and who they are here to be.</p>
 </div>
 
 <div class="science-card reveal">
   <p class="science-num">88%</p>
-  <p class="science-label">Said this was the most transformational personal growth experience of their life</p>
+  <p class="science-label">Said this was the most <span style="color:var(--purple);">transformational</span> personal growth experience of their life</p>
   <p>Across all formats — courses, retreats, therapy, coaching — students consistently ranked Becoming You as the most impactful work they had ever done.</p>
 </div>
 ```
@@ -420,7 +420,7 @@ footer strong { color:rgba(168,85,247,0.7); font-weight:500; }
   <div class="final-cta-inner">
     <h2 class="reveal">You were not born to perform. You were born to <em style="font-style:italic">become.</em></h2>
     <p class="reveal reveal-delay-1">30 days. One Quest. The rest of your life — finally lived as yourself.</p>
-    <button class="btn-final reveal reveal-delay-2" onclick="alert('Enrollment coming soon!')">Begin Becoming You</button>
+    <button class="btn-final reveal reveal-delay-2" style="background:var(--gradient);box-shadow:0 8px 40px rgba(107,33,168,0.5);" onclick="alert('Enrollment coming soon!')">Begin Becoming You</button>
     <br>
     <span class="guarantee reveal reveal-delay-3">✦ &nbsp; 15-day money back guarantee &nbsp; · &nbsp; Lifetime access &nbsp; · &nbsp; 195 countries</span>
   </div>
