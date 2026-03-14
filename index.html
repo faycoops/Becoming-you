@@ -33,7 +33,7 @@ nav { position:sticky; top:0; z-index:100; background:rgba(10,10,10,0.95); backd
 .nav-logo { display:flex; align-items:center; gap:10px; }
 .nav-logo-icon { width:28px; height:28px; background:var(–gradient); border-radius:6px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:0.65rem; font-weight:800; letter-spacing:0.05em; }
 .nav-logo-text { font-size:0.78rem; font-weight:600; color:#fff; letter-spacing:0.08em; text-transform:uppercase; }
-.nav-cta { background:var(–gradient); color:#fff; font-size:0.72rem; font-weight:700; padding:10px 22px; border-radius:100px; border:none; cursor:pointer; letter-spacing:0.06em; text-transform:uppercase; transition:opacity .2s, transform .2s; }
+.nav-cta { background:var(–gradient); color:#fff; font-size:0.72rem; font-weight:700; padding:10px 22px; border-radius:100px; border:none; cursor:pointer; letter-spacing:0.06em; text-transform:uppercase; transition:opacity .2s, transform .2s; box-shadow:0 4px 20px rgba(107,33,168,0.4); }
 .nav-cta:hover { opacity:0.9; transform:translateY(-1px); }
 
 /* HERO */
@@ -53,7 +53,7 @@ nav { position:sticky; top:0; z-index:100; background:rgba(10,10,10,0.95); backd
 .stats { background:#fff; border-bottom:1px solid var(–border); padding:32px 28px; }
 .stats-inner { max-width:800px; margin:0 auto; display:flex; align-items:center; justify-content:center; flex-wrap:wrap; }
 .stat { text-align:center; padding:8px 36px; }
-.stat-num { font-family:‘Fraunces’,serif; font-size:2rem; font-weight:700; color:var(–black); display:block; }
+.stat-num { font-family:‘Fraunces’,serif; font-size:2rem; font-weight:700; background:var(–gradient); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; display:block; }
 .stat-label { font-size:0.68rem; color:var(–muted); text-transform:uppercase; letter-spacing:0.12em; font-weight:600; }
 .stat-div { width:1px; height:44px; background:var(–border); }
 @media(max-width:500px){ .stat-div{display:none;} .stat{padding:10px 16px;} }
@@ -144,8 +144,8 @@ nav { position:sticky; top:0; z-index:100; background:rgba(10,10,10,0.95); backd
 
 /* FOOTER */
 footer { background:var(–black); border-top:1px solid rgba(255,255,255,0.08); padding:32px 28px; text-align:center; }
-footer p { font-size:0.8rem; color:rgba(255,255,255,0.3); }
-footer strong { color:rgba(168,85,247,0.7); font-weight:500; }
+footer p { font-size:0.8rem; color:rgba(255,255,255,0.7); }
+footer strong { color:#c084fc; font-weight:600; }
 
 /* REVEAL ANIMATIONS */
 .reveal { opacity:0; transform:translateY(28px); transition:opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
@@ -165,7 +165,7 @@ footer strong { color:rgba(168,85,247,0.7); font-weight:500; }
     <div class="nav-logo-icon">MV</div>
     <span class="nav-logo-text">Mindvalley</span>
   </div>
-  <button class="nav-cta" onclick="document.querySelector('.final-cta').scrollIntoView({behavior:'smooth'})">Join the Quest</button>
+  <button class="nav-cta" onclick="document.querySelector('.final-cta').scrollIntoView({behavior:'smooth'})">✦ Join the Quest</button>
 </nav>
 
 <!-- HERO -->
@@ -267,7 +267,7 @@ footer strong { color:rgba(168,85,247,0.7); font-weight:500; }
 
 <section class="narrative">
   <div class="narrative-inner">
-    <h2 class="reveal"><span style="color:var(--purple);">COME HOME</span> TO YOURSELF.</h2>
+    <h2 class="reveal">COME HOME TO <span style="color:var(--purple);">YOURSELF.</span></h2>
     <p class="reveal">You have survived more than most people know.</p>
     <p class="reveal">You have kept moving. You have kept trying.</p>
     <p class="reveal">But something inside still feels unfinished.</p>
@@ -331,7 +331,7 @@ footer strong { color:rgba(168,85,247,0.7); font-weight:500; }
 </div>
 
 <div class="day-card reveal">
-  <div class="day-img" style="background:linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80') center/cover;">
+  <div class="day-img" style="background:linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80') center/cover;">
     <div class="day-img-content">
       <span class="day-num">Phase 03</span>
       <p class="day-title">BECOME</p>
@@ -355,28 +355,28 @@ footer strong { color:rgba(168,85,247,0.7); font-weight:500; }
 
 <section class="testimonials">
   <div class="testimonials-inner">
-    <p class="testi-headline reveal">"Like finally meeting myself for the first time."</p>
+    <p class="testi-headline reveal" style="color:var(--purple);">"Like finally meeting myself for the first time."</p>
     <p class="testi-sub reveal">Real stories. Real transformation.</p>
-    <button class="btn-small reveal" onclick="document.querySelector('.final-cta').scrollIntoView({behavior:'smooth'})">Join Becoming You Today</button>
+    <button class="btn-small reveal" onclick="document.querySelector('.final-cta').scrollIntoView({behavior:'smooth'})" style="background:var(--gradient);">✦ Join Becoming You Today</button>
 
 ```
 <div class="testi-card reveal">
-  <p class="testi-text">"I have done therapy for years. This Quest cracked open something therapy never reached. By week two I stopped trying to fix myself and started actually knowing myself. That changed everything."</p>
+  <p class="testi-text">"I have done therapy for years. This Quest cracked open something therapy never reached. By week two I <span style="color:var(--purple);font-weight:600;">stopped trying to fix myself</span> and started actually knowing myself. That changed everything."</p>
   <p class="testi-name">— Sarah, 34 · London</p>
 </div>
 
 <div class="testi-card reveal">
-  <p class="testi-text">"I realised I had been living someone else's dream my entire adult life. This Quest gave me permission — and the tools — to finally build my own. I left my job. I moved countries. I am more alive than I have ever been."</p>
+  <p class="testi-text">"I realised I had been living someone else's dream my entire adult life. This Quest gave me permission — and the tools — to finally build my own. I left my job. I moved countries. <span style="color:var(--purple);font-weight:600;">I am more alive than I have ever been.</span>"</p>
   <p class="testi-name">— James, 41 · New York</p>
 </div>
 
 <div class="testi-card reveal">
-  <p class="testi-text">"I came in thinking I needed to find my purpose. I left knowing I needed to find myself first. Once I did, purpose showed up on its own. This is the most important work I have ever done."</p>
+  <p class="testi-text">"I came in thinking <span style="color:var(--purple);font-weight:600;">I needed to find my purpose.</span> I left knowing I needed to find myself first. Once I did, purpose showed up on its own. This is the most important work I have ever done."</p>
   <p class="testi-name">— Priya, 29 · Singapore</p>
 </div>
 
 <div class="testi-card reveal">
-  <p class="testi-text">"I stopped performing. Stopped shrinking. Stopped apologising for existing. Becoming You gave me back to myself and I will never go back to who I was pretending to be."</p>
+  <p class="testi-text">"<span style="color:var(--purple);font-weight:600;">I stopped performing.</span> Stopped shrinking. Stopped apologising for existing. Becoming You gave me back to myself and I will never go back to who I was pretending to be."</p>
   <p class="testi-name">— Michelle, 38 · Toronto</p>
 </div>
 ```
